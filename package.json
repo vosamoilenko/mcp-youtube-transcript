@@ -1,0 +1,29 @@
+{
+  "name": "mcp-youtube-transcript",
+  "version": "1.0.0",
+  "description": "MCP server for fetching YouTube video transcripts",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "mcp-youtube-transcript": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mcp",
+    "youtube",
+    "transcript",
+    "captions",
+    "subtitles"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.18.0",
+    "express": "^5.1.0",
+    "node-fetch": "^3.3.2",
+    "youtubei.js": "^15.1.1"
+  }
+}
