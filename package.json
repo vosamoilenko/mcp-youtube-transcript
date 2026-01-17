@@ -1,7 +1,7 @@
 {
   "name": "mcp-youtube-transcript",
-  "version": "1.0.0",
-  "description": "MCP server for fetching YouTube video transcripts",
+  "version": "1.0.1",
+  "description": "MCP server for fetching YouTube video transcripts, searching within transcripts, and extracting channel video lists",
   "main": "index.js",
   "type": "module",
   "bin": {
@@ -9,21 +9,42 @@
   },
   "scripts": {
     "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "export-channel": "node scripts/export-channel-videos.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "test:unit": "vitest run --exclude test/integration.test.js",
+    "test:integration": "vitest run test/integration.test.js"
   },
   "keywords": [
     "mcp",
+    "model-context-protocol",
     "youtube",
     "transcript",
     "captions",
-    "subtitles"
+    "subtitles",
+    "claude",
+    "ai",
+    "llm"
   ],
-  "author": "",
+  "author": "vosamoilenko",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vosamoilenko/mcp-youtube-transcript.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vosamoilenko/mcp-youtube-transcript/issues"
+  },
+  "homepage": "https://github.com/vosamoilenko/mcp-youtube-transcript#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.18.0",
-    "express": "^5.1.0",
-    "node-fetch": "^3.3.2",
-    "youtubei.js": "^15.1.1"
+    "youtubei.js": "^16.0.1"
+  },
+  "devDependencies": {
+    "vitest": "^4.0.17"
   }
 }
